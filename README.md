@@ -1,2 +1,2 @@
-# <a href="https://www.aibnouf.github.io" target="https://www.aibnouf.github.io"</a>
+https://www.aibnouf.github.io
 A project to create my own website.
