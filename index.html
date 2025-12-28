@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- FavIcons Start -->
+<!-- FavIcons Start -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -99,14 +99,24 @@
             align-items: center;
             padding: 20px 0;
         }
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+        .logo-text {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary-blue);
-            text-decoration: none;
+            margin-left: 10px;
         }
-        .logo span { color: var(--accent-teal); }
+        .logo-text span { color: var(--accent-teal); }
         nav ul {
             display: flex;
             list-style: none;
@@ -266,12 +276,25 @@
             nav ul li { margin: 15px 0; }
             .contact-bar .container { flex-direction: column; }
             .contact-item { margin: 10px 0; }
+            .logo-text {
+                font-size: 1.5rem;
+            }
+            .logo-img {
+                height: 40px;
+            }
         }
         @media (max-width: 576px) {
             .hero { padding: 100px 0 60px; }
             .hero h1 { font-size: 2rem; }
             .content-card { padding: 25px; }
             section { padding: 60px 0; }
+            .logo-text {
+                font-size: 1.2rem;
+                margin-left: 5px;
+            }
+            .logo-img {
+                height: 35px;
+            }
         }
     </style>
 </head>
@@ -279,7 +302,10 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Dr. Ibnouf<span>.</span></a>
+            <a href="#" class="logo-container">
+                <img src="logo.png" alt="Dr. Ibnouf Logo" class="logo-img">
+                <span class="logo-text">Dr. Ibnouf<span>.</span></span>
+            </a>
             <button class="mobile-menu-btn" id="menuBtn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -339,7 +365,7 @@
 
             <div class="content-card">
                 <h3><i class="fas fa-stethoscope"></i> My Role as an Anaesthesiologist</h3>
-                <p>My responsibility extends far beyond “putting patients to sleep.” I ensure patient safety before, during, and after surgical procedures.</p>
+                <p>My responsibility extends far beyond "putting patients to sleep." I ensure patient safety before, during, and after surgical procedures.</p>
                 <ul class="highlight-list">
                     <li>Assessing patients preoperatively and optimizing their medical conditions</li>
                     <li>Providing safe and tailored anaesthesia plans</li>
@@ -359,19 +385,19 @@
             </div>
             <div class="two-column">
                 <div class="content-card">
-                    <h4><i class="fas fa-comment-medical"></i> “Anaesthesia is just sleep.”</h4>
+                    <h4><i class="fas fa-comment-medical"></i> "Anaesthesia is just sleep."</h4>
                     <p>It is a controlled, medically induced state affecting consciousness, pain, memory, and reflexes.</p>
                 </div>
                 <div class="content-card">
-                    <h4><i class="fas fa-user-md"></i> “The surgeon handles everything.”</h4>
+                    <h4><i class="fas fa-user-md"></i> "The surgeon handles everything."</h4>
                     <p>Anaesthesiologists are the physicians responsible for keeping the patient stable throughout the procedure.</p>
                 </div>
                 <div class="content-card">
-                    <h4><i class="fas fa-shield-alt"></i> “Anaesthesia is dangerous.”</h4>
+                    <h4><i class="fas fa-shield-alt"></i> "Anaesthesia is dangerous."</h4>
                     <p>Modern anaesthesia is extremely safe when administered by trained specialists.</p>
                 </div>
                 <div class="content-card">
-                    <h4><i class="fas fa-info-circle"></i> “You don’t need to tell the Anaesthesiologist everything.”</h4>
+                    <h4><i class="fas fa-info-circle"></i> "You don't need to tell the Anaesthesiologist everything."</h4>
                     <p>Full honesty about medications, smoking, or health conditions is essential for safety.</p>
                 </div>
             </div>
@@ -434,7 +460,7 @@
             </div>
             <div class="copyright">
                 <p>© <span id="currentYear">2025</span> Dr. AbdulRhman Ibnouf. All professional information is accurate as of current practice.</p>
-                <p>This website is for professional and educational purposes.</p>
+                <p>This website is for professional and patient educational purposes.</p>
             </div>
         </div>
     </footer>
