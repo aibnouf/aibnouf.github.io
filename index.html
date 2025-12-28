@@ -130,7 +130,15 @@
             transition: color 0.3s;
         }
         nav ul li a:hover { color: var(--light-blue); }
-        .mobile-menu-btn { display: none; }
+        .mobile-menu-btn { 
+            display: none; 
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            z-index: 1001;
+        }
 
         /* Hero */
         .hero {
@@ -289,27 +297,38 @@
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
-                background: none;
-                border: none;
-                font-size: 1.5rem;
-                color: var(--primary-blue);
-                cursor: pointer;
             }
             nav ul {
                 position: fixed;
-                top: 80px;
-                left: -100%;
+                top: 0;
+                right: -100%;
                 flex-direction: column;
                 background: white;
-                width: 100%;
+                width: 250px;
+                height: 100vh;
                 box-shadow: var(--shadow);
-                padding: 20px;
-                transition: 0.3s;
+                padding: 100px 30px 30px;
+                transition: 0.5s ease;
+                z-index: 1000;
             }
-            nav ul.active { left: 0; }
-            nav ul li { margin: 15px 0; }
-            .contact-bar .container { flex-direction: column; }
-            .contact-item { margin: 10px 0; }
+            nav ul.active { 
+                right: 0; 
+            }
+            nav ul li { 
+                margin: 15px 0; 
+            }
+            nav ul li a {
+                font-size: 1.1rem;
+                padding: 10px;
+                display: block;
+                border-bottom: 1px solid var(--medium-gray);
+            }
+            .contact-bar .container { 
+                flex-direction: column; 
+            }
+            .contact-item { 
+                margin: 10px 0; 
+            }
             .logo-text {
                 font-size: 1.5rem;
             }
@@ -357,7 +376,7 @@
                     <li><a href="#about">My Role</a></li>
                     <li><a href="#misconceptions">Insights</a></li>
                     <li><a href="#vision">Vision</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact-info">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -369,12 +388,12 @@
             <h1>Dr. AbdulRhman Ibnouf</h1>
             <p class="subtitle">Senior Specialist — Anaesthesiology</p>
             <p class="institution">Dr. Suliman AlHabib Medical Group – Al Sweidi Hospital - Riyadh - KSA</p>
-            <a href="#contact" class="btn"><i class="fas fa-envelope"></i> Contact Information</a>
+            <a href="#contact-info" class="btn"><i class="fas fa-envelope"></i> Contact Information</a>
         </div>
     </section>
 
     <!-- Contact Information Bar -->
-    <div class="contact-bar" id="contact">
+    <div class="contact-bar" id="contact-info">
         <div class="container">
             <div class="contact-item">
                 <i class="fas fa-clock"></i>
@@ -518,24 +537,48 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Mobile Menu Toggle - Fixed version
         const menuBtn = document.getElementById('menuBtn');
         const navMenu = document.getElementById('navMenu');
-        menuBtn.addEventListener('click', () => {
+        
+        menuBtn.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            menuBtn.querySelector('i').classList.toggle('fa-bars');
-            menuBtn.querySelector('i').classList.toggle('fa-times');
+            
+            // Toggle between bars and times icon
+            const icon = menuBtn.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
+
         // Close menu when clicking a link
         document.querySelectorAll('#navMenu a').forEach(item => {
             item.addEventListener('click', () => {
                 navMenu.classList.remove('active');
-                menuBtn.querySelector('i').classList.add('fa-bars');
                 menuBtn.querySelector('i').classList.remove('fa-times');
+                menuBtn.querySelector('i').classList.add('fa-bars');
             });
         });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navMenu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnMenuBtn && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                menuBtn.querySelector('i').classList.remove('fa-times');
+                menuBtn.querySelector('i').classList.add('fa-bars');
+            }
+        });
+
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -544,4 +587,13 @@
                 if(targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
-                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
