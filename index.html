@@ -180,6 +180,15 @@
             margin-right: 10px;
             color: var(--accent-teal);
         }
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-item a:hover {
+            color: var(--accent-teal);
+            text-decoration: underline;
+        }
 
         /* Cards & Content */
         .content-card {
@@ -238,6 +247,31 @@
             padding: 40px 0 20px;
             text-align: center;
         }
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 20px 0 30px;
+        }
+        .footer-contact a {
+            display: inline-flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            transition: all 0.3s;
+        }
+        .footer-contact a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        .footer-contact i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
         .copyright {
             margin-top: 30px;
             padding-top: 20px;
@@ -281,6 +315,15 @@
             }
             .logo-img {
                 height: 40px;
+            }
+            .footer-contact {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            .footer-contact a {
+                width: 80%;
+                justify-content: center;
             }
         }
         @media (max-width: 576px) {
@@ -326,7 +369,7 @@
             <h1>Dr. AbdulRhman Ibnouf</h1>
             <p class="subtitle">Senior Specialist — Anaesthesiology</p>
             <p class="institution">Dr. Suliman AlHabib Medical Group – Al Sweidi Hospital - Riyadh - KSA</p>
-            <a href="#contact" class="btn"><i class="far fa-calendar-alt"></i> View Contact Hours</a>
+            <a href="#contact" class="btn"><i class="fas fa-envelope"></i> Contact Information</a>
         </div>
     </section>
 
@@ -338,12 +381,12 @@
                 <span><strong>Contact Hours:</strong> 15:00 – 18:00 (Riyadh Time)</span>
             </div>
             <div class="contact-item">
-                <i class="fas fa-hospital"></i>
-                <span><strong>Hospital:</strong> Al Sweidi Hospital, Riyadh</span>
+                <i class="fas fa-envelope"></i>
+                <span><strong>Email:</strong> <a href="mailto:info@ibnouf.me">info@ibnouf.me</a></span>
             </div>
             <div class="contact-item">
-                <i class="fas fa-user-md"></i>
-                <span><strong>Role:</strong> Anaesthesiology Senior Specialist</span>
+                <i class="fab fa-linkedin"></i>
+                <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abdulrhman-ibnouf" target="_blank">linkedin.com/in/abdulrhman-ibnouf</a></span>
             </div>
         </div>
     </div>
@@ -454,6 +497,16 @@
         <div class="container">
             <h3>Dr. AbdulRhman Ibnouf</h3>
             <p>Senior Specialist in Anaesthesiology | Dedicated to Patient Safety & Education</p>
+            
+            <div class="footer-contact">
+                <a href="mailto:info@ibnouf.me">
+                    <i class="fas fa-envelope"></i> info@ibnouf.me
+                </a>
+                <a href="https://www.linkedin.com/in/abdulrhman-ibnouf" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
+            </div>
+            
             <div style="margin: 25px 0;">
                 <a href="#home" class="btn" style="background-color: var(--accent-teal); margin: 5px;">Back to Top</a>
             </div>
@@ -491,13 +544,4 @@
                 if(targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                    
