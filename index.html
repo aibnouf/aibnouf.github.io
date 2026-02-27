@@ -1,31 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- FavIcons Start -->
+    <!-- FavIcons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
-    <!-- FavIcons End -->
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. AbdulRhman Ibnouf - Senior Specialist, Anaesthesiology</title>
-    <!-- SEO Meta Description -->
+
+    <!-- SEO Meta -->
     <meta name="description" content="Dr. AbdulRhman Ibnouf is a Senior Specialist in Anaesthesiology at Dr. Suliman AlHabib Medical Group, Riyadh, KSA. Dedicated to patient safety, pain management, and public education about anaesthesia.">
-    <meta name="keywords" content="Dr. AbdulRhman Ibnouf, Anaesthesiology, Anaesthesiologist, Anaesthesia, Anesthesi, Riyadh, Saudi Arabia, Pain Management, Epidural, Patient Safety, Dr. Suliman AlHabib">
+    <meta name="keywords" content="Dr. AbdulRhman Ibnouf, Anaesthesiology, Anaesthesiologist, Anaesthesia, Riyadh, Saudi Arabia, Pain Management, Epidural, Patient Safety">
     <meta name="author" content="Dr. AbdulRhman Ibnouf">
-    <!-- Open Graph / Social Sharing -->
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Dr. AbdulRhman Ibnouf - Senior Specialist, Anaesthesiology">
-    <meta property="og:description" content="Senior Specialist in Anaesthesiology at Dr. Suliman AlHabib Medical Group, Riyadh, KSA. Dedicated to patient safety and medical education.">
+    <meta property="og:description" content="Senior Specialist in Anaesthesiology at Dr. Suliman AlHabib Medical Group, Riyadh, KSA.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ibnouf.me">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ibnouf.me/">
+
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dr. AbdulRhman Ibnouf",
+        "jobTitle": "Senior Specialist in Anaesthesiology",
+        "worksFor": {
+            "@type": "Hospital",
+            "name": "Dr. Sulaiman AlHabib Medical Group – Al Sweidi Hospital",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Riyadh",
+                "addressCountry": "SA"
+            }
+        },
+        "url": "https://ibnouf.me",
+        "sameAs": [
+            "https://www.linkedin.com/in/abdulrhman-ibnouf"
+        ]
+    }
+    </script>
+
     <style>
         :root {
             --primary-blue: #1a5f7a;
-            --light-blue: #2a87b3;
+            --light-blue: #1f6f93;        /* Slightly darker for better contrast */
             --accent-teal: #57cc99;
             --light-gray: #f8f9fa;
             --medium-gray: #e9ecef;
@@ -35,7 +65,11 @@
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             --border-radius: 8px;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Open Sans', sans-serif;
             color: var(--text-dark);
@@ -56,6 +90,10 @@
         }
         section {
             padding: 80px 0;
+        }
+        /* Add scroll margin for fixed header */
+        #about, #misconceptions, #vision, #contact-info {
+            scroll-margin-top: 80px;
         }
         .section-title {
             text-align: center;
@@ -125,12 +163,16 @@
             color: var(--primary-blue);
             margin-left: 10px;
         }
-        .logo-text span { color: var(--accent-teal); }
+        .logo-text span {
+            color: var(--accent-teal);
+        }
         nav ul {
             display: flex;
             list-style: none;
         }
-        nav ul li { margin-left: 2rem; }
+        nav ul li {
+            margin-left: 2rem;
+        }
         nav ul li a {
             text-decoration: none;
             color: var(--text-dark);
@@ -138,9 +180,11 @@
             font-size: 1rem;
             transition: color 0.3s;
         }
-        nav ul li a:hover { color: var(--light-blue); }
-        .mobile-menu-btn { 
-            display: none; 
+        nav ul li a:hover {
+            color: var(--light-blue);
+        }
+        .mobile-menu-btn {
+            display: none;
             background: none;
             border: none;
             font-size: 1.5rem;
@@ -162,7 +206,7 @@
         }
         .hero .subtitle {
             font-size: 1.5rem;
-            color: var(--light-blue);
+            color: var(--light-blue);    /* Improved contrast */
             margin-bottom: 1.5rem;
             font-weight: 500;
         }
@@ -320,11 +364,11 @@
                 transition: 0.5s ease;
                 z-index: 1000;
             }
-            nav ul.active { 
-                right: 0; 
+            nav ul.active {
+                right: 0;
             }
-            nav ul li { 
-                margin: 15px 0; 
+            nav ul li {
+                margin: 15px 0;
             }
             nav ul li a {
                 font-size: 1.1rem;
@@ -332,11 +376,11 @@
                 display: block;
                 border-bottom: 1px solid var(--medium-gray);
             }
-            .contact-bar .container { 
-                flex-direction: column; 
+            .contact-bar .container {
+                flex-direction: column;
             }
-            .contact-item { 
-                margin: 10px 0; 
+            .contact-item {
+                margin: 10px 0;
             }
             .logo-text {
                 font-size: 1.5rem;
@@ -370,235 +414,241 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo-container">
-                <img src="assets/logo.png" alt="Dr. Ibnouf Logo" class="logo-img">
-            </a>
-            <button class="mobile-menu-btn" id="menuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul id="navMenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">My Role</a></li>
-                    <li><a href="#misconceptions">Insights</a></li>
-                    <li><a href="#vision">Vision</a></li>
-                    <li><a href="#contact-info">Contact</a></li>
-                    <li><a href="https://epidural.ibnouf.me" target="_blank" style="color: var(--accent-teal);"><i class="fas fa-flask"></i> Active Projects</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Dr. AbdulRhman Ibnouf</h1>
-            <p class="subtitle">Senior Specialist — Anaesthesiology</p>
-            <p class="institution">Dr. Sulaiman AlHabib Medical Group – Al Sweidi Hospital - Riyadh - KSA</p>
-            <a href="#contact-info" class="btn"><i class="fas fa-envelope"></i> Contact Information</a>
-        </div>
-    </section>
+<!-- Header -->
+<header>
+    <div class="container header-container">
+        <a href="#" class="logo-container" aria-label="Homepage">
+            <img src="assets/logo.png" alt="Dr. AbdulRhman Ibnouf logo" class="logo-img">
+        </a>
+        <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">My Role</a></li>
+                <li><a href="#misconceptions">Insights</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#contact-info">Contact</a></li>
+                <li><a href="https://epidural.ibnouf.me" target="_blank" class="nav-link-accent"><i class="fas fa-flask"></i> Active Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- Contact Information Bar -->
-    <div class="contact-bar" id="contact-info">
-        <div class="container">
-            <div class="contact-item">
-                <i class="fas fa-clock"></i>
-                <span><strong>Contact Hours:</strong> 15:00 – 18:00 (Riyadh Time)</span>
-            </div>
-           <a <span><strong>Email:</strong> <a href="mailto:info@ibnouf.me" target="_blank"> info@ibnouf.me</a></span></a>
-                <a href="https://www.linkedin.com/in/abdulrhman-ibnouf" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn Profile </a>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <h1>Dr. AbdulRhman Ibnouf</h1>
+        <p class="subtitle">Senior Specialist — Anaesthesiology</p>
+        <p class="institution">Dr. Sulaiman AlHabib Medical Group – Al Sweidi Hospital - Riyadh - KSA</p>
+        <a href="#contact-info" class="btn"><i class="fas fa-envelope"></i> Contact Information</a>
+    </div>
+</section>
+
+<!-- Contact Information Bar (fixed HTML) -->
+<div class="contact-bar" id="contact-info">
+    <div class="container">
+        <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <span><strong>Contact Hours:</strong> 15:00 – 18:00 (Riyadh Time)</span>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <strong>Email:</strong> <a href="mailto:info@ibnouf.me">info@ibnouf.me</a>
+        </div>
+        <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/abdulrhman-ibnouf" target="_blank">LinkedIn Profile</a>
         </div>
     </div>
+</div>
 
-    <!-- Current Position & About -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>Professional Profile</h2>
-            </div>
+<!-- Current Position & About -->
+<section id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>Professional Profile</h2>
+        </div>
 
+        <div class="content-card">
+            <h3><i class="fas fa-briefcase-medical"></i> Current Position</h3>
+            <p><strong>Institution:</strong> Dr. Sulaiman AlHabib Medical Group – Al Sweidi Hospital, Riyadh, KSA</p>
+            <p><strong>Role:</strong> Anaesthesiology Senior Specialist</p>
+            <p><strong>Duration:</strong> January 2023 – Present</p>
+        </div>
+
+        <div class="content-card">
+            <h3><i class="fas fa-stethoscope"></i> My Role as an Anaesthesiologist</h3>
+            <p>My responsibility extends far beyond "putting patients to sleep." I ensure patient safety before, during, and after surgical procedures.</p>
+            <ul class="highlight-list">
+                <li>Assessing patients preoperatively and optimizing their medical conditions</li>
+                <li>Providing safe and tailored anaesthesia plans</li>
+                <li>Monitoring vital functions throughout surgery</li>
+                <li>Managing pain and recovery in the postoperative period</li>
+                <li>Responding to emergencies and critical care situations</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Misconceptions & Insights -->
+<section id="misconceptions" style="background-color: var(--light-gray);">
+    <div class="container">
+        <div class="section-title">
+            <h2>Common Misconceptions About Anaesthesia</h2>
+        </div>
+        <div class="two-column">
             <div class="content-card">
-                <h3><i class="fas fa-briefcase-medical"></i> Current Position</h3>
-                <p><strong>Institution:</strong> Dr. Sulaiman AlHabib Medical Group – Al Sweidi Hospital, Riyadh, KSA</p>
-                <p><strong>Role:</strong> Anaesthesiology Senior Specialist</p>
-                <p><strong>Duration:</strong> January 2023 – Present</p>
+                <h4><i class="fas fa-comment-medical"></i> "Anaesthesia is just sleep."</h4>
+                <p>It is a controlled, medically induced state affecting consciousness, pain, memory, and reflexes.</p>
             </div>
-
             <div class="content-card">
-                <h3><i class="fas fa-stethoscope"></i> My Role as an Anaesthesiologist</h3>
-                <p>My responsibility extends far beyond "putting patients to sleep." I ensure patient safety before, during, and after surgical procedures.</p>
-                <ul class="highlight-list">
-                    <li>Assessing patients preoperatively and optimizing their medical conditions</li>
-                    <li>Providing safe and tailored anaesthesia plans</li>
-                    <li>Monitoring vital functions throughout surgery</li>
-                    <li>Managing pain and recovery in the postoperative period</li>
-                    <li>Responding to emergencies and critical care situations</li>
-                </ul>
+                <h4><i class="fas fa-user-md"></i> "The surgeon handles everything."</h4>
+                <p>Anaesthesiologists are the physicians responsible for keeping the patient stable throughout the procedure.</p>
+            </div>
+            <div class="content-card">
+                <h4><i class="fas fa-shield-alt"></i> "Anaesthesia is dangerous."</h4>
+                <p>Modern anaesthesia is extremely safe when administered by trained specialists.</p>
+            </div>
+            <div class="content-card">
+                <h4><i class="fas fa-info-circle"></i> "You don't need to tell the Anaesthesiologist everything."</h4>
+                <p>Full honesty about medications, smoking, or health conditions is essential for safety.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Misconceptions & Insights -->
-    <section id="misconceptions" style="background-color: var(--light-gray);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Common Misconceptions About Anaesthesia</h2>
-            </div>
-            <div class="two-column">
-                <div class="content-card">
-                    <h4><i class="fas fa-comment-medical"></i> "Anaesthesia is just sleep."</h4>
-                    <p>It is a controlled, medically induced state affecting consciousness, pain, memory, and reflexes.</p>
+<!-- Vision & Values -->
+<section id="vision">
+    <div class="container">
+        <div class="section-title">
+            <h2>My Vision & Values</h2>
+        </div>
+
+        <div class="content-card">
+            <h3><i class="fas fa-bullseye"></i> My Vision</h3>
+            <p>My mission is to make anaesthesia safer by educating non‑medical personnel and the public. Awareness reduces fear, improves cooperation, and enhances patient outcomes.</p>
+            <p>I am planning to pursue a subspecialty in Pain Management to support patients in acute and chronic pain settings.</p>
+        </div>
+
+        <div class="content-card">
+            <h3><i class="fas fa-heartbeat"></i> Professional Values</h3>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>Patient Safety</h4>
+                    <p>Above all else</p>
                 </div>
-                <div class="content-card">
-                    <h4><i class="fas fa-user-md"></i> "The surgeon handles everything."</h4>
-                    <p>Anaesthesiologists are the physicians responsible for keeping the patient stable throughout the procedure.</p>
+                <div class="value-item">
+                    <i class="fas fa-book-medical"></i>
+                    <h4>Evidence-Based</h4>
+                    <p>Clinical practice</p>
                 </div>
-                <div class="content-card">
-                    <h4><i class="fas fa-shield-alt"></i> "Anaesthesia is dangerous."</h4>
-                    <p>Modern anaesthesia is extremely safe when administered by trained specialists.</p>
+                <div class="value-item">
+                    <i class="fas fa-comments"></i>
+                    <h4>Clear Communication</h4>
+                    <p>With patients and families</p>
                 </div>
-                <div class="content-card">
-                    <h4><i class="fas fa-info-circle"></i> "You don't need to tell the Anaesthesiologist everything."</h4>
-                    <p>Full honesty about medications, smoking, or health conditions is essential for safety.</p>
+                <div class="value-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Continuous Learning</h4>
+                    <p>Professional development</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <h4>Compassionate Care</h4>
+                    <p>Culturally aware approach</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Vision & Values -->
-    <section id="vision">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Vision & Values</h2>
-            </div>
+<!-- Footer (fixed contact links) -->
+<footer>
+    <div class="container">
+        <h3>Dr. AbdulRhman Ibnouf</h3>
+        <p>Senior Specialist in Anaesthesiology | Dedicated to Patient Safety & Education</p>
 
-            <div class="content-card">
-                <h3><i class="fas fa-bullseye"></i> My Vision</h3>
-                <p>My mission is to make anaesthesia safer by educating non‑medical personnel and the public. Awareness reduces fear, improves cooperation, and enhances patient outcomes.</p>
-                <p>I am planning to pursue a subspecialty in Pain Management to support patients in acute and chronic pain settings.</p>
-            </div>
-
-            <div class="content-card">
-                <h3><i class="fas fa-heartbeat"></i> Professional Values</h3>
-                <div class="values-grid">
-                    <div class="value-item">
-                        <i class="fas fa-user-shield"></i>
-                        <h4>Patient Safety</h4>
-                        <p>Above all else</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-book-medical"></i>
-                        <h4>Evidence-Based</h4>
-                        <p>Clinical practice</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-comments"></i>
-                        <h4>Clear Communication</h4>
-                        <p>With patients and families</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h4>Continuous Learning</h4>
-                        <p>Professional development</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-hands-helping"></i>
-                        <h4>Compassionate Care</h4>
-                        <p>Culturally aware approach</p>
-                    </div>
-                </div>
-            </div>
+        <div class="footer-contact">
+            <a href="mailto:info@ibnouf.me"><i class="fas fa-envelope"></i> info@ibnouf.me</a>
+            <a href="https://www.linkedin.com/in/abdulrhman-ibnouf" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+            <a href="https://epidural.ibnouf.me" target="_blank" style="background-color: var(--accent-teal);"><i class="fas fa-flask"></i> Active Projects</a>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <h3>Dr. AbdulRhman Ibnouf</h3>
-            <p>Senior Specialist in Anaesthesiology | Dedicated to Patient Safety & Education</p>
-            
-            <div class="footer-contact">
-                <a <span><strong>Email:</strong> <a href="mailto:info@ibnouf.me" target="_blank"> info@ibnouf.me</a></span></a>
-                <a href="https://www.linkedin.com/in/abdulrhman-ibnouf" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn Profile </a>
-                <a href="https://epidural.ibnouf.me" target="_blank" style="background-color: var(--accent-teal);">
-                    <i class="fas fa-flask"></i> Active Projects
-                </a>
-            </div>
-            
-            <div style="margin: 25px 0;">
-                <a href="#home" class="btn" style="background-color: var(--accent-teal); margin: 5px;">Back to Top</a>
-            </div>
-            <div class="copyright">
-                <p>© <span id="currentYear">2025</span> Dr. AbdulRhman Ibnouf. All professional information is accurate as of current practice.</p>
-                <p>This website is for professional and patient educational purposes.</p>
-            </div>
+        <div style="margin: 25px 0;">
+            <a href="#home" class="btn" style="background-color: var(--accent-teal); margin: 5px;">Back to Top</a>
         </div>
-    </footer>
+        <div class="copyright">
+            <p>© <span id="currentYear">2025</span> Dr. AbdulRhman Ibnouf. All professional information is accurate as of current practice.</p>
+            <p>This website is for professional and patient educational purposes.</p>
+        </div>
+    </div>
+</footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Mobile Menu Toggle - Fixed version
+<!-- JavaScript -->
+<script>
+    (function() {
+        // Mobile menu toggle with ARIA support
         const menuBtn = document.getElementById('menuBtn');
         const navMenu = document.getElementById('navMenu');
-        
-        menuBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            
-            // Toggle between bars and times icon
+
+        function toggleMenu(force) {
+            const isActive = navMenu.classList.toggle('active', force);
+            menuBtn.setAttribute('aria-expanded', isActive);
+
             const icon = menuBtn.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
+            if (isActive) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
             } else {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             }
+        }
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMenu();
         });
 
         // Close menu when clicking a link
-        document.querySelectorAll('#navMenu a').forEach(item => {
-            item.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuBtn.querySelector('i').classList.remove('fa-times');
-                menuBtn.querySelector('i').classList.add('fa-bars');
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                    toggleMenu(false);
+                }
             });
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
-            const isClickInsideNav = navMenu.contains(event.target);
-            const isClickOnMenuBtn = menuBtn.contains(event.target);
-            
-            if (!isClickInsideNav && !isClickOnMenuBtn && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                menuBtn.querySelector('i').classList.remove('fa-times');
-                menuBtn.querySelector('i').classList.add('fa-bars');
+            if (!navMenu.contains(event.target) && !menuBtn.contains(event.target) && navMenu.classList.contains('active')) {
+                toggleMenu(false);
             }
         });
 
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Smooth scrolling for anchor links
+
+        // Smooth scrolling for anchor links (using scroll-margin-top in CSS)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
+                if (targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                if (targetElement) {
+                    targetElement.scrollIntoView({
                         behavior: 'smooth'
                     });
                 }
             });
         });
-    </script>
+    })();
+</script>
+
 </body>
 </html>
