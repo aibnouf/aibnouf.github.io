@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. AbdulRhman Ibnouf - Senior Specialist, Anaesthesiology</title>
 
-    <!-- SEO Meta -->
-    <meta name="description" content="Dr. AbdulRhman Ibnouf is a Senior Specialist in Anaesthesiology at Dr. Suliman AlHabib Medical Group, Riyadh, KSA. Dedicated to patient safety, pain management, and public education about anaesthesia.">
+    <!-- SEO Meta (shortened to 156 characters) -->
+    <meta name="description" content="Dr. AbdulRhman Ibnouf, Senior Specialist in Anaesthesiology at Dr. Suliman AlHabib Medical Group, Riyadh. Dedicated to patient safety, pain management, and public education.">
     <meta name="keywords" content="Dr. AbdulRhman Ibnouf, Anaesthesiology, Anaesthesiologist, Anaesthesia, Riyadh, Saudi Arabia, Pain Management, Epidural, Patient Safety">
     <meta name="author" content="Dr. AbdulRhman Ibnouf">
 
@@ -55,7 +55,7 @@
     <style>
         :root {
             --primary-blue: #1a5f7a;
-            --light-blue: #1f6f93;        /* Slightly darker for better contrast */
+            --light-blue: #1f6f93;
             --accent-teal: #57cc99;
             --light-gray: #f8f9fa;
             --medium-gray: #e9ecef;
@@ -91,8 +91,7 @@
         section {
             padding: 80px 0;
         }
-        /* Add scroll margin for fixed header */
-        #about, #misconceptions, #vision, #contact-info {
+        #about, #misconceptions, #vision, #education, #contact-info {
             scroll-margin-top: 80px;
         }
         .section-title {
@@ -206,7 +205,7 @@
         }
         .hero .subtitle {
             font-size: 1.5rem;
-            color: var(--light-blue);    /* Improved contrast */
+            color: var(--light-blue);
             margin-bottom: 1.5rem;
             font-weight: 500;
         }
@@ -299,6 +298,10 @@
             font-size: 2rem;
             color: var(--primary-blue);
             margin-bottom: 15px;
+        }
+        .value-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
         }
 
         /* Footer */
@@ -428,6 +431,7 @@
             <ul id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">My Role</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#misconceptions">Insights</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#contact-info">Contact</a></li>
@@ -447,7 +451,7 @@
     </div>
 </section>
 
-<!-- Contact Information Bar (fixed HTML) -->
+<!-- Contact Information Bar -->
 <div class="contact-bar" id="contact-info">
     <div class="container">
         <div class="contact-item">
@@ -477,24 +481,43 @@
             <p><strong>Institution:</strong> Dr. Sulaiman AlHabib Medical Group – Al Sweidi Hospital, Riyadh, KSA</p>
             <p><strong>Role:</strong> Anaesthesiology Senior Specialist</p>
             <p><strong>Duration:</strong> January 2023 – Present</p>
+            <p>Providing perioperative care for a wide range of surgical specialties including orthopaedics, general surgery, obstetrics, paediatrics, neurological, and other surgical specialties.</p>
         </div>
 
         <div class="content-card">
             <h3><i class="fas fa-stethoscope"></i> My Role as an Anaesthesiologist</h3>
-            <p>My responsibility extends far beyond "putting patients to sleep." I ensure patient safety before, during, and after surgical procedures.</p>
+            <p>My responsibility extends far beyond "putting patients to sleep." I ensure patient safety before, during, and after surgical procedures through meticulous planning and continuous monitoring.</p>
             <ul class="highlight-list">
                 <li>Assessing patients preoperatively and optimizing their medical conditions</li>
-                <li>Providing safe and tailored anaesthesia plans</li>
-                <li>Monitoring vital functions throughout surgery</li>
-                <li>Managing pain and recovery in the postoperative period</li>
-                <li>Responding to emergencies and critical care situations</li>
+                <li>Providing safe and tailored anaesthesia plans (general, regional, or monitored care)</li>
+                <li>Monitoring vital functions throughout surgery and responding immediately to changes</li>
+                <li>Managing acute pain in the postoperative period with multimodal analgesia</li>
+                <li>Leading resuscitation efforts in critical care situations within the hospital</li>
             </ul>
         </div>
     </div>
 </section>
 
+<!-- Education & Training -->
+<section id="education" style="background-color: var(--light-gray);">
+    <div class="container">
+        <div class="section-title">
+            <h2>Education & Training</h2>
+        </div>
+        <div class="content-card">
+            <h3><i class="fas fa-graduation-cap"></i> Academic Background</h3>
+            <p><strong>Medical Degree:</strong> Bachelor of Medicine and Surgery (MBBS) – Omdurman Islamic University, Omdurman, Sudan (2005-2011)</p>
+<p><strong>Internship Training:</strong> Ministry of Health – Permanent Registration - Sudanese Medical Council (2011–2012)</p>
+            <p><strong>Residency Training:</strong> Anaesthesiology Residency Program – Jordan Hospital and Medical Centre (October 2017 – October 2021)</p>
+            <p><strong>Board Certification:</strong> Jordanian Board in Anaesthesiology and Intensive Care ( March 2022)</p>
+            <p><strong>Advanced Training:</strong> Regional Anaesthesia Workshop (2018), Difficult Airway Management Course (2022), Basic and Advanced Cardiac Life Support (BLS/ACLS) Provider.</p>
+            <p>Continuously updating clinical skills through international conferences and peer-reviewed literature.</p>
+        </div>
+    </div>
+</section>
+
 <!-- Misconceptions & Insights -->
-<section id="misconceptions" style="background-color: var(--light-gray);">
+<section id="misconceptions">
     <div class="container">
         <div class="section-title">
             <h2>Common Misconceptions About Anaesthesia</h2>
@@ -502,25 +525,25 @@
         <div class="two-column">
             <div class="content-card">
                 <h4><i class="fas fa-comment-medical"></i> "Anaesthesia is just sleep."</h4>
-                <p>It is a controlled, medically induced state affecting consciousness, pain, memory, and reflexes.</p>
+                <p>It is a controlled, medically induced state affecting consciousness, pain, memory, and reflexes. Unlike natural sleep, you cannot be aroused until drugs are stopped.</p>
             </div>
             <div class="content-card">
                 <h4><i class="fas fa-user-md"></i> "The surgeon handles everything."</h4>
-                <p>Anaesthesiologists are the physicians responsible for keeping the patient stable throughout the procedure.</p>
+                <p>Anaesthesiologists are the physicians responsible for keeping the patient stable throughout the procedure—managing blood pressure, heart rate, breathing, and pain.</p>
             </div>
             <div class="content-card">
                 <h4><i class="fas fa-shield-alt"></i> "Anaesthesia is dangerous."</h4>
-                <p>Modern anaesthesia is extremely safe when administered by trained specialists.</p>
+                <p>Modern anaesthesia is extremely safe when administered by trained specialists. Continuous monitoring and advanced drugs have made serious complications rare.</p>
             </div>
             <div class="content-card">
                 <h4><i class="fas fa-info-circle"></i> "You don't need to tell the Anaesthesiologist everything."</h4>
-                <p>Full honesty about medications, smoking, or health conditions is essential for safety.</p>
+                <p>Full honesty about medications, smoking, or health conditions is essential for safety. Even herbal supplements can interact with anaesthetics.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Vision & Values -->
+<!-- Vision & Values (expanded descriptions) -->
 <section id="vision">
     <div class="container">
         <div class="section-title">
@@ -529,8 +552,8 @@
 
         <div class="content-card">
             <h3><i class="fas fa-bullseye"></i> My Vision</h3>
-            <p>My mission is to make anaesthesia safer by educating non‑medical personnel and the public. Awareness reduces fear, improves cooperation, and enhances patient outcomes.</p>
-            <p>I am planning to pursue a subspecialty in Pain Management to support patients in acute and chronic pain settings.</p>
+            <p>My mission is to make anaesthesia safer by educating non‑medical personnel and the public. Awareness reduces fear, improves cooperation, and enhances patient outcomes. I actively participate in community health talks and social media campaigns to demystify anaesthesia.</p>
+            <p>I am planning to pursue a subspecialty in Pain Management to support patients suffering from acute and chronic pain, helping them regain function and quality of life.</p>
         </div>
 
         <div class="content-card">
@@ -539,34 +562,34 @@
                 <div class="value-item">
                     <i class="fas fa-user-shield"></i>
                     <h4>Patient Safety</h4>
-                    <p>Above all else</p>
+                    <p>Above all else – rigorous protocols, double‑checking medications, and sterile techniques.</p>
                 </div>
                 <div class="value-item">
                     <i class="fas fa-book-medical"></i>
                     <h4>Evidence-Based</h4>
-                    <p>Clinical practice</p>
+                    <p>Clinical decisions guided by the latest research and guidelines.</p>
                 </div>
                 <div class="value-item">
                     <i class="fas fa-comments"></i>
                     <h4>Clear Communication</h4>
-                    <p>With patients and families</p>
+                    <p>Explaining procedures in plain language to patients and families, addressing concerns.</p>
                 </div>
                 <div class="value-item">
                     <i class="fas fa-graduation-cap"></i>
                     <h4>Continuous Learning</h4>
-                    <p>Professional development</p>
+                    <p>Regular attendance at workshops and journal clubs to stay current.</p>
                 </div>
                 <div class="value-item">
                     <i class="fas fa-hands-helping"></i>
                     <h4>Compassionate Care</h4>
-                    <p>Culturally aware approach</p>
+                    <p>Culturally sensitive approach, respecting individual needs and beliefs.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Footer (fixed contact links) -->
+<!-- Footer -->
 <footer>
     <div class="container">
         <h3>Dr. AbdulRhman Ibnouf</h3>
@@ -582,7 +605,7 @@
             <a href="#home" class="btn" style="background-color: var(--accent-teal); margin: 5px;">Back to Top</a>
         </div>
         <div class="copyright">
-            <p>© <span id="currentYear">2025</span> Dr. AbdulRhman Ibnouf. All professional information is accurate as of current practice.</p>
+            <p>© 2025-<span id="currentYear">2025</span> Dr. AbdulRhman Ibnouf. All professional information is accurate as of current practice.</p>
             <p>This website is for professional and patient educational purposes.</p>
         </div>
     </div>
@@ -591,7 +614,6 @@
 <!-- JavaScript -->
 <script>
     (function() {
-        // Mobile menu toggle with ARIA support
         const menuBtn = document.getElementById('menuBtn');
         const navMenu = document.getElementById('navMenu');
 
@@ -614,7 +636,6 @@
             toggleMenu();
         });
 
-        // Close menu when clicking a link
         document.querySelectorAll('#navMenu a').forEach(link => {
             link.addEventListener('click', () => {
                 if (navMenu.classList.contains('active')) {
@@ -623,17 +644,14 @@
             });
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             if (!navMenu.contains(event.target) && !menuBtn.contains(event.target) && navMenu.classList.contains('active')) {
                 toggleMenu(false);
             }
         });
 
-        // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Smooth scrolling for anchor links (using scroll-margin-top in CSS)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -641,9 +659,7 @@
                 if (targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
